@@ -17,8 +17,13 @@ const copy404Plugin = (): Plugin => ({
 });
 
 export default defineConfig(() => {
+  // In GitHub Actions, process.env.GITHUB_REPOSITORY is "owner/repo"
+  // For GitHub Pages, this ensures assets load from "/<repo>/" even without trailing slashes
+  const ghRepo = process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : './';
+  const base = process.env.BASE_PATH || ghRepo;
+
   return {
-    base: './',
+    base,
     plugins: [react(), tailwindcss(), copy404Plugin()],
     resolve: {
       alias: {

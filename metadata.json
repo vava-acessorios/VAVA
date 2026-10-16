@@ -1,0 +1,6 @@
+{
+  "name": "VAVÁ ACESSÓRIOS | Loja Premium de iPhones",
+  "description": "Loja especializada em iPhones novos e seminovos com procedência verificada e garantia em Petrolina - PE e Juazeiro - BA. 9 anos de excelência no universo Apple.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

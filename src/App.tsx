@@ -99,7 +99,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white flex flex-col selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[#050505] text-white flex flex-col selection:bg-white selection:text-black overflow-x-hidden w-full max-w-[100vw]">
       {/* Top Navbar */}
       <Navbar
         storeConfig={storeConfig}

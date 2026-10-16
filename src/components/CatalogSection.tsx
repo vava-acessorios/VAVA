@@ -50,10 +50,10 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
   }, [products, conditionFilter, generationFilter, searchQuery]);
 
   return (
-    <section id="iphones" className="py-28 px-6 max-w-7xl mx-auto relative">
+    <section id="iphones" className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative">
       {/* Section Header */}
-      <div className="max-w-2xl mb-12">
-        <p className="text-xs font-semibold tracking-[0.28em] uppercase text-neutral-400 mb-3">
+      <div className="max-w-2xl mb-8 sm:mb-12">
+        <p className="text-[11px] sm:text-xs font-semibold tracking-[0.24em] uppercase text-neutral-400 mb-2 sm:mb-3">
           CATÁLOGO VAVÁ ACESSÓRIOS
         </p>
         <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
@@ -62,18 +62,18 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
             PRÓXIMO IPHONE.
           </span>
         </h2>
-        <p className="text-base sm:text-lg text-neutral-300 font-light mt-4">
+        <p className="text-sm sm:text-lg text-neutral-300 font-light mt-3 sm:mt-4">
           Escolha o modelo ideal para você. Todos com procedência verificada e garantia da loja.
         </p>
       </div>
 
       {/* Filter and Search Bar Controls (Segmented clean buttons per design constitution) */}
-      <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-neutral-800/80">
+      <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 sm:mb-10 pb-6 border-b border-neutral-800/80">
         {/* Condition Filter Controls */}
-        <div className="flex items-center gap-1.5 p-1.5 bg-[#121214] border border-neutral-800 rounded-2xl overflow-x-auto">
+        <div className="flex items-center gap-1.5 p-1.5 bg-[#121214] border border-neutral-800 rounded-2xl overflow-x-auto no-scrollbar">
           <button
             onClick={() => setConditionFilter('all')}
-            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 sm:px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all cursor-pointer whitespace-nowrap ${
               conditionFilter === 'all'
                 ? 'bg-white text-black shadow-md'
                 : 'text-neutral-400 hover:text-white'
@@ -83,7 +83,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
           </button>
           <button
             onClick={() => setConditionFilter('novo')}
-            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 sm:px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all cursor-pointer whitespace-nowrap ${
               conditionFilter === 'novo'
                 ? 'bg-white text-black shadow-md'
                 : 'text-neutral-400 hover:text-white'
@@ -93,7 +93,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
           </button>
           <button
             onClick={() => setConditionFilter('seminovo')}
-            className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 sm:px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all cursor-pointer whitespace-nowrap ${
               conditionFilter === 'seminovo'
                 ? 'bg-white text-black shadow-md'
                 : 'text-neutral-400 hover:text-white'
@@ -106,7 +106,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         {/* Secondary Category Filters & Search */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           {/* Generation segmented tabs */}
-          <div className="flex items-center gap-1 p-1 bg-[#121214] border border-neutral-800 rounded-xl overflow-x-auto">
+          <div className="flex items-center gap-1 p-1 bg-[#121214] border border-neutral-800 rounded-xl overflow-x-auto no-scrollbar">
             <button
               onClick={() => setGenerationFilter('all')}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
@@ -227,7 +227,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="whitespace-nowrap px-8 py-4 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-[0.16em] hover:bg-neutral-200 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+          className="w-full sm:w-auto inline-flex items-center justify-center text-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-[0.14em] hover:bg-neutral-200 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]"
         >
           SIMULAR AVALIAÇÃO NO WHATSAPP
         </a>

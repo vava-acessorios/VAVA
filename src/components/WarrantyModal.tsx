@@ -19,11 +19,11 @@ export const WarrantyModal: React.FC<WarrantyModalProps> = ({ isOpen, onClose })
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl rounded-3xl bg-[#0D0D0F] border border-neutral-800 p-6 sm:p-10 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-2xl rounded-3xl bg-[#0D0D0F] border border-neutral-800 p-5 sm:p-10 shadow-2xl space-y-6 max-h-[92vh] overflow-y-auto"
       >
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white transition-colors cursor-pointer"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white transition-colors cursor-pointer z-10"
           aria-label="Fechar termos de garantia"
         >
           <X className="w-5 h-5" />

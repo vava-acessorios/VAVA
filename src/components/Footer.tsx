@@ -21,9 +21,9 @@ export const Footer: React.FC<FooterProps> = ({
   )}`;
 
   return (
-    <footer className="bg-[#040405] border-t border-neutral-900 pt-20 pb-12 px-6">
+    <footer className="bg-[#040405] border-t border-neutral-900 pt-16 pb-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-neutral-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 sm:pb-16 border-b border-neutral-900">
           {/* Brand Info Column */}
           <div className="lg:col-span-5 space-y-4">
             <a href="#" className="flex flex-col group inline-block">

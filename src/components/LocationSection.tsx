@@ -12,14 +12,14 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ storeConfig })
   )}`;
 
   return (
-    <section id="local" className="py-24 px-6 max-w-7xl mx-auto relative">
-      <div className="rounded-3xl border border-neutral-800 bg-[#0E0E10] p-8 sm:p-14 relative overflow-hidden">
+    <section id="local" className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative">
+      <div className="rounded-3xl border border-neutral-800 bg-[#0E0E10] p-6 sm:p-14 relative overflow-hidden">
         {/* Subtle radial metallic glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.03] rounded-full blur-3xl pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-          <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.28em] uppercase text-neutral-400">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.24em] uppercase text-neutral-400">
               <MapPin className="w-4 h-4 text-white" />
               <span>VISITE NOSSA LOJA FÍSICA</span>
             </div>
@@ -29,11 +29,11 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ storeConfig })
               <span className="text-neutral-400">Petrolina - PE.</span>
             </h2>
 
-            <p className="text-neutral-300 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+            <p className="text-neutral-300 text-sm sm:text-lg font-light leading-relaxed max-w-xl">
               Venha tomar um café conosco, testar os modelos de iPhone pessoalmente em mãos e tirar todas as suas dúvidas com nossos consultores especializados.
             </p>
 
-            <div className="space-y-2 pt-2 text-xs text-neutral-300">
+            <div className="space-y-2.5 pt-1 text-xs text-neutral-300">
               <div className="flex items-start gap-2.5">
                 <Navigation className="w-4 h-4 text-white shrink-0 mt-0.5" />
                 <span>
@@ -50,23 +50,23 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ storeConfig })
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3">
               <a
                 href={storeConfig.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-[0.16em] hover:bg-neutral-200 active:scale-95 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-[0.14em] hover:bg-neutral-200 active:scale-95 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)]"
               >
                 <Navigation className="w-4 h-4" />
                 <span>ABRIR NO GOOGLE MAPS</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
               </a>
 
               <a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-neutral-700 bg-neutral-900/60 text-white font-semibold text-xs uppercase tracking-[0.16em] hover:bg-neutral-800 transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-neutral-700 bg-neutral-900/60 text-white font-semibold text-xs uppercase tracking-[0.14em] hover:bg-neutral-800 transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>HORÁRIO & COMO CHEGAR</span>

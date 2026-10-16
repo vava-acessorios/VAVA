@@ -66,14 +66,14 @@ export const StoreManagerModal: React.FC<StoreManagerModalProps> = ({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#0B0B0D] border border-neutral-800 p-6 sm:p-10 shadow-2xl space-y-6"
+        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#0B0B0D] border border-neutral-800 p-5 sm:p-10 shadow-2xl space-y-6"
       >
-        <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+        <div className="flex items-start justify-between pb-4 border-b border-neutral-800 gap-4">
           <div>
             <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-semibold">
               PAINEL DA LOJA
             </span>
-            <h3 className="text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
               Gestão de Preços & Estoque
             </h3>
             <p className="text-xs text-neutral-400 mt-1">
@@ -83,7 +83,7 @@ export const StoreManagerModal: React.FC<StoreManagerModalProps> = ({
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white transition-colors cursor-pointer"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white transition-colors cursor-pointer shrink-0"
             aria-label="Fechar painel"
           >
             <X className="w-5 h-5" />

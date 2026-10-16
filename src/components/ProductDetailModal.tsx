@@ -30,16 +30,15 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   if (!product) return null;
 
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<'3d' | 'photos'>(
-    product.embed3dUrl ? '3d' : 'photos'
-  );
+  // Default to photos for instant mobile loading & scroll freedom, allow easy 3D toggle
+  const [viewMode, setViewMode] = useState<'3d' | 'photos'>('photos');
 
   useEffect(() => {
     if (product) {
-      setViewMode(product.embed3dUrl ? '3d' : 'photos');
+      setViewMode('photos');
       setActivePhotoIndex(0);
     }
-  }, [product?.id, product?.embed3dUrl]);
+  }, [product?.id]);
 
   const getWhatsAppMessage = () => {
     return `Olá! Vim pelo site da Vavá Acessórios e tenho interesse no ${product.modelo}, ${product.armazenamento}, cor ${product.cor} (${
@@ -58,12 +57,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0C0C0E] border border-neutral-800 p-6 sm:p-10 shadow-[0_25px_70px_rgba(0,0,0,0.95)]"
+        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#0C0C0E] border border-neutral-800 p-5 sm:p-10 shadow-[0_25px_70px_rgba(0,0,0,0.95)]"
       >
-        {/* Close Button */}
+        {/* Close Button with touch target >= 44px */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors cursor-pointer z-10"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors cursor-pointer z-20"
           aria-label="Fechar modal de detalhes"
         >
           <X className="w-5 h-5" />

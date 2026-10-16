@@ -9,11 +9,11 @@ interface TrustSectionProps {
 
 export const TrustSection: React.FC<TrustSectionProps> = ({ storeConfig, onOpenWarranty }) => {
   return (
-    <section id="confianca" className="py-28 px-6 bg-[#080809] border-b border-neutral-900 relative">
+    <section id="confianca" className="py-16 sm:py-24 px-4 sm:px-6 bg-[#080809] border-b border-neutral-900 relative">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <p className="text-xs font-semibold tracking-[0.28em] uppercase text-neutral-400 mb-3">
+        <div className="max-w-3xl mb-12 sm:mb-16">
+          <p className="text-[11px] sm:text-xs font-semibold tracking-[0.24em] uppercase text-neutral-400 mb-2 sm:mb-3">
             CONFIANÇA & TRANSPARÊNCIA
           </p>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
@@ -22,15 +22,15 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ storeConfig, onOpenW
               UMA EXPERIÊNCIA SEGURA.
             </span>
           </h2>
-          <p className="text-base sm:text-lg text-neutral-300 font-light mt-4">
+          <p className="text-sm sm:text-lg text-neutral-300 font-light mt-3 sm:mt-4">
             Em um mercado onde a autenticidade é essencial, conheça os pilares que guiam a Vavá Acessórios há 9 anos.
           </p>
         </div>
 
         {/* 4 Trust Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* 01 - Procedência Verificada */}
-          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
+          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
             <div>
               <div className="flex items-center justify-between mb-8">
                 <span className="text-xs font-bold tracking-[0.3em] text-neutral-400 group-hover:text-white transition-colors">
@@ -56,7 +56,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ storeConfig, onOpenW
           </div>
 
           {/* 02 - Garantia Real */}
-          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
+          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
             <div>
               <div className="flex items-center justify-between mb-8">
                 <span className="text-xs font-bold tracking-[0.3em] text-neutral-400 group-hover:text-white transition-colors">
@@ -88,7 +88,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ storeConfig, onOpenW
           </div>
 
           {/* 03 - Atendimento Especializado */}
-          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
+          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
             <div>
               <div className="flex items-center justify-between mb-8">
                 <span className="text-xs font-bold tracking-[0.3em] text-neutral-400 group-hover:text-white transition-colors">
@@ -114,7 +114,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ storeConfig, onOpenW
           </div>
 
           {/* 04 - Loja Física */}
-          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
+          <div className="rounded-3xl bg-[#0F0F11] border border-neutral-800/80 p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-700 transition-colors group">
             <div>
               <div className="flex items-center justify-between mb-8">
                 <span className="text-xs font-bold tracking-[0.3em] text-neutral-400 group-hover:text-white transition-colors">

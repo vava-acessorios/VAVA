@@ -10,11 +10,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ storeConfig }) => {
   const igUrl = `https://www.instagram.com/${storeConfig.instagram}/`;
 
   return (
-    <section id="sobre" className="py-28 px-6 max-w-7xl mx-auto relative">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section id="sobre" className="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto relative">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
         {/* Left Column: Story & Positioning */}
-        <div className="lg:col-span-7 flex flex-col space-y-6">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.28em] uppercase text-neutral-400">
+        <div className="lg:col-span-7 flex flex-col space-y-5 sm:space-y-6">
+          <div className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.24em] uppercase text-neutral-400">
             <span>HISTÓRIA & TRADIÇÃO</span>
             <span aria-hidden="true" className="text-neutral-600">·</span>
             <span>DESDE 2017</span>
@@ -28,7 +28,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ storeConfig }) => {
             NO UNIVERSO APPLE.
           </h2>
 
-          <div className="space-y-4 text-base sm:text-lg text-neutral-300 font-light leading-relaxed">
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-lg text-neutral-300 font-light leading-relaxed">
             <p>
               A <strong className="text-white font-semibold">Vavá Acessórios</strong> nasceu da paixão pela tecnologia e do compromisso em oferecer uma experiência de compra confiável.
             </p>
@@ -41,7 +41,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ storeConfig }) => {
           </div>
 
           {/* Highlights checklist */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 text-xs text-neutral-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2 sm:pt-3 text-xs text-neutral-300">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
               <span>9 anos consolidada no Vale do São Francisco</span>
@@ -60,12 +60,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ storeConfig }) => {
             </div>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-3 sm:pt-4">
             <a
               href={igUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-[0.16em] hover:bg-neutral-200 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-[0.14em] hover:bg-neutral-200 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             >
               <Instagram className="w-4 h-4" />
               <span>CONHEÇA A VAVÁ ACESSÓRIOS</span>

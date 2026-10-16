@@ -15,12 +15,16 @@ const copy404Plugin = (): Plugin => ({
     }
   },
 });
-
 export default defineConfig(() => {
-  // In GitHub Actions, process.env.GITHUB_REPOSITORY is "owner/repo"
-  // For GitHub Pages, this ensures assets load from "/<repo>/" even without trailing slashes
-  const ghRepo = process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : './';
-  const base = process.env.BASE_PATH || ghRepo;
+  // Safe base URL handling for GitHub Pages & local builds
+  let base = './';
+  if (process.env.BASE_PATH && process.env.BASE_PATH.trim() !== '') {
+    const bp = process.env.BASE_PATH.trim();
+    base = bp.endsWith('/') ? bp : `${bp}/`;
+  } else if (process.env.GITHUB_REPOSITORY) {
+    const repo = process.env.GITHUB_REPOSITORY.split('/')[1];
+    base = repo ? `/${repo}/` : './';
+  }
 
   return {
     base,

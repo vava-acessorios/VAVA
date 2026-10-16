@@ -21,6 +21,23 @@
           window.location.replace(path + '/' + window.location.search + window.location.hash);
         }
       })();
+
+      // Diagnóstico automático para GitHub Pages se os módulos não forem carregados
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          var preloader = document.getElementById('pre-loader');
+          if (preloader && (window.location.hostname.includes('github.io') || window.location.protocol === 'file:')) {
+            var tip = document.createElement('div');
+            tip.style.cssText = 'margin-top:20px;padding:14px 18px;background:#171717;border:1px solid #333;border-radius:12px;max-width:440px;text-align:left;font-size:12px;line-height:1.6;color:#a3a3a3;box-shadow:0 10px 25px rgba(0,0,0,0.5);';
+            tip.innerHTML = '<strong style="color:#ffffff;display:block;margin-bottom:6px;font-size:13px;">⚙️ Configuração do GitHub Pages:</strong>' +
+              'Se o site não abrir, verifique se a fonte em seu repositório está configurada como <b>GitHub Actions</b>:<br>' +
+              '1. Acesse o GitHub &rarr; <b>Settings &gt; Pages</b>.<br>' +
+              '2. Em <b>Build and deployment &gt; Source</b>, mude para <b>GitHub Actions</b>.<br>' +
+              '3. Verifique na aba <b>Actions</b> o workflow concluído com sucesso!';
+            preloader.appendChild(tip);
+          }
+        }, 4000);
+      });
     </script>
     <script type="application/ld+json">
     {
